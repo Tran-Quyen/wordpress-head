@@ -1,0 +1,326 @@
+/*!
+Theme Name: Maker
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: maker
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Maker is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.site-footer {
+	display: none;
+}
+/*************Main Styles **************/
+:root {
+	--first: #2583FD;
+	--second: #07E1A2;
+	--gray: #9299A6;
+	--gray-dark: #2C3340;
+	--gray-light: #AFB5C2;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Lato", sans-serif;
+}
+.container {
+	max-width: 1185px;
+	margin: 0 auto;
+}
+.header {
+	background-color: white;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu__list {
+	display: flex;
+	align-items: center;
+	font-size: 1.4rem;
+}
+.menu__item:not(:last-child) {
+	margin-right: 1rem ;
+}
+.menu__link {
+	display: block;
+	padding: 1.5rem 2rem;
+	color: var(--gray-dark);
+	text-decoration: none;
+	transition: color .2s linear;
+}
+.menu__link:hover {
+	color: var(--first);
+}
+.menu__item:last-child .menu__link {
+	border: 1px solid var(--gray);
+	border-radius: 4px;
+}
+
+.banner {
+	background-image: linear-gradient(to right bottom, var(--first), var(--second));
+	position: relative;
+	padding-top: 8rem;
+	overflow: hidden;
+}
+
+.banner__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+
+.banner__content {
+	max-width: 47rem;
+	color: white;
+}
+
+.banner__image img {
+	max-width: 42rem;
+}
+
+.banner__circle {
+	position: absolute;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.banner__circle--small {
+	border-width: 8vh;
+  width: 44vh;
+  height: 44vh;
+  top: 10rem;
+  left: 8rem;
+}
+
+.banner__circle--big {
+	border-width: 14vh;
+	width: 110vh;
+  height: 110vh;
+  bottom: -50%;
+  right: -5%;
+}
+
+.banner__waves {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -1px;
+  z-index: 2;
+  height: 8vw;
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading__small {
+	margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.banner__content .heading__small {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.heading__big {
+  margin-bottom: 1.6rem;
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.banner__content .heading__big {
+	font-size: 4.4rem;
+}
+
+.desc {
+	margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.download__app-store {
+	display: inline-block;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.about-header {
+	position: relative;
+	padding: 4rem 1.5rem;
+	background-color: white;
+}
+.about-header__content {
+	max-width: 60rem;
+	margin: 0 auto 8rem;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.icon {
+	display: flex;
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.about-header__icon {
+	background-color: rgba(37, 131, 253, .12);
+}
+.about-header__title {
+	text-transform: capitalize;
+	color: var(--gray-dark);
+}
+.about-header__desc {
+	color: var(--gray-light);
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+.about-feature {
+	padding: 4rem 1.5rem;
+}
+.about-feature__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.about-feature__container > * {
+	width: 50%;
+}
+.about-feature__image {
+	background-position: 50% 50%;
+	background-size: 82%;
+	background-repeat: no-repeat;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.about-feature__image img{
+	max-width: 65%;
+}
+.about-feature__info {
+	padding-left: 8%;
+	padding-right: 8%;
+}
+.about-feature__info .heading__small {
+	color: var(--gray-light);
+}
+.about-feature__items {
+	padding-top: 2.5rem;
+}
+.about-feature__item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding-bottom: 1rem;
+}
+.about-feature__item-content {
+	margin-left: 1.6rem;
+}
+.about-feature__item-content h5 {
+	margin-bottom: 8px;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 700;
+	color: var(--gray-dark);
+}
+.about-feature__item-content .desc {
+	color: var(--gray-light);
+}
+.about-feature__more {
+	display: flex;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	align-items: center;
+	color: var(--first);
+	font-size: 1.4rem;
+	line-height: 2rem;
+	font-weight: 700;
+	text-align: left;
+	text-decoration: none;
+}
+.about-feature__more img {
+	margin-left: .5rem;
+	margin-top: .2rem;
+}
